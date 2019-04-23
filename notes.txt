@@ -1,0 +1,4 @@
+--> for protobuffer compilation
+- add option go_package to the .proto file
+- compile with at the root of project: 
+for x in **/*.proto; do protoc --go_out=paths=source_relative:. $x; done

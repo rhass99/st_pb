@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "github.com/rhass99/st_pb/person";
+
+import "date/date.proto";
+
+package person;
+
+message Person {
+    int32 age = 1;
+    string firstName = 2;
+    string lastName = 3;
+    bytes smallPicture = 4;
+    bool isProfileVerified = 5;
+    float height = 6;
+    repeated string phoneNumber = 7;
+
+    enum EyeColour {
+        UNKNOWN = 0;
+        GREEN = 1;
+        BROWN = 2;
+    }
+
+    EyeColour eyeColour = 8;
+
+    date.Date date = 9;
+}
